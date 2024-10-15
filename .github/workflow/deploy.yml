@@ -1,0 +1,13 @@
+name: Deploiement
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    name: Deploiement
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./script.sh
